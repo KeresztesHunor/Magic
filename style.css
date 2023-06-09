@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+#solution {
+  width: 32vh;
+  margin: auto;
+  padding-bottom: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#solution :first-child > p {
+  font-size: 2vh;
+}
+
+#cardGuess {
+  width: 65%;
+  aspect-ratio: 1/1;
+  margin: auto;
+  color: white;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+}
+
+#cardGuess > p {
+  width: 100%;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  font-size: 8vh;
+}
+
+.unknownCard {
+  background-color: black;
+}
+
+#playingField {
+  width: fit-content;
+  height: 100%;
+  margin: auto;
+}
+
+#playingField > div {
+  padding: 8px;
+  display: grid;
+  background-color: hsl(0, 0%, 75%);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+#cards {
+  width: 100%;
+}
+
+#cards > div {
+  height: calc(100vh / 7 - 32px);
+  aspect-ratio: 1/1;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+}
+
+#cards > div > p {
+  width: 100%;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 8vh;
+}
+
+.white {
+  background-color: white;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+@media screen and (max-height: 512px) {
+  #solution {
+    width: 512px;
+  }
+
+  #solution :first-child > p {
+    font-size: 32px;
+  }
+
+  #cardGuess > p {
+    font-size: 64px;
+  }
+
+  #playingField {
+    width: 100%;
+    max-width: 512px;
+    min-width: 512px;
+  }
+
+  #cards > div {
+    height: auto;
+    width: 100%;
+  }
+
+  #cards > div > p {
+    font-size: 64px;
+  }
+}
